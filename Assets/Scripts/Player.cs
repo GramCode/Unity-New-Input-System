@@ -1,27 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    //Create a reference for the input actions
     private PlayerInputActions _input;
 
-    void Start()
+    private void Start()
     {
-        //Instantiate input actions
         _input = new PlayerInputActions();
-        //Enable the Dog input action map
-        _input.Dog.Enable();
-        //Register perform action
-        _input.Dog.Bark.performed += Bark_performed;
+        _input.Player.Enable();
     }
 
-    private void Bark_performed(InputAction.CallbackContext context)
+    private void Update()
     {
-        Debug.Log("Action Performed!");
-        Debug.Log("Context: " + context);
+        CalculateMovement();
     }
+
+    private void CalculateMovement()
+    {
+        var move = _input.Player.Movement.ReadValue<Vector2>();
+        transform.Translate(new Vector3(move.x, 0, move.y) * Time.deltaTime * 5f);
+    }
+
 }
