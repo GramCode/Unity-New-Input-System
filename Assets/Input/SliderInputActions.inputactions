@@ -1,0 +1,34 @@
+{
+    "name": "SliderInputActions",
+    "maps": [
+        {
+            "name": "ProgressBar",
+            "id": "979e61a6-035a-498f-b13e-0fa820154b5c",
+            "actions": [
+                {
+                    "name": "Fill",
+                    "type": "Button",
+                    "id": "22797d4c-3ac9-4e7a-bf93-600f715b378b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "405f59cc-1acb-4270-9106-f58da42f7d82",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
